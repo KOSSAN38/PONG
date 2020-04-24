@@ -62,7 +62,11 @@ public class PONGpanel extends JPanel implements  ActionListener, KeyListener {
         repaint();
     }
 
-    public void keyPressed(KeyEvent e); {
+    public void keyPressed(KeyEvent e) {
+
+    }
+
+    {
             player1.pressed(e.getKetCode());
             player2.pressed(e.getKetCode());
         }
@@ -76,9 +80,14 @@ public class PONGpanel extends JPanel implements  ActionListener, KeyListener {
         @Override
         public void paintComponent(Graphics g) {
             super.paintComponent(g);
-            g.drawString(game.getPanel().getScore(1) + game.getPanel().getScore(2)), game.getWidth() / 2, 10;
+            g.drawString(String.format("%d:", game.getPanel().getScore(1))game.getPanel().getScore(2)), game.getWidth() / 2, 10;
             ball.paint(g);
             player1.paint(g);
             player2.paint(g);
         }
+
+    @Override
+    public void actionPerformed(java.awt.event.ActionEvent actionEvent) {
+
+    }
 }
