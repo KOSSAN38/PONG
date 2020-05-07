@@ -1,7 +1,5 @@
+import javax.swing.*;
 import java.awt.*;
-import java.awt.rectangle;
-
-import javax.swing.JOptionPane;
 
 public class Ball {
     private static final int WIDTH = 30, HEIGHT = 30;
@@ -34,7 +32,7 @@ public class Ball {
         checkCollision();
     }
     public void checkCollision() {
-        if (game.getPanel().getPlayer(1).getBounds().intersects(getBounds()) || game.getPanel().getPlayer(2).getBounds().intersects(getBounds)
+        if (game.getPanel().getPlayer(1).getBounds().intersects(getBounds()) || game.getPanel().getPlayer(2).getBounds().intersects(getBounds()))
             xa = -xa;
     }
     public Rectangle getBounds() {

@@ -2,14 +2,10 @@ import com.sun.deploy.security.SelectableSecurityManager;
 import javafx.event.ActionEvent;
 
 import javax.swing.*;
-import java.awt.Color;
-import java.awt.Graphics;
+import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-
-import java.swing.JPanel;
-import java.swing.Timer;
 
 public class PONGpanel extends JPanel implements  ActionListener, KeyListener {
     private PONG game;
@@ -47,7 +43,7 @@ public class PONGpanel extends JPanel implements  ActionListener, KeyListener {
     public int getScore(int playerNo){
         if (playerNo == 1);
             return score1;
-        else
+        else 
             return score2;
     }
 
@@ -80,7 +76,7 @@ public class PONGpanel extends JPanel implements  ActionListener, KeyListener {
         @Override
         public void paintComponent(Graphics g) {
             super.paintComponent(g);
-            g.drawString(String.format("%d:", game.getPanel().getScore(1))game.getPanel().getScore(2)), game.getWidth() / 2, 10;
+            g.drawString(String.format("%d:", game.getPanel().getScore(1) + " : " + game.getPanel().getScore(2)), game.getWidth() / 2, 10);
             ball.paint(g);
             player1.paint(g);
             player2.paint(g);
