@@ -1,4 +1,3 @@
-import com.sun.deploy.security.SelectableSecurityManager;
 import javafx.event.ActionEvent;
 
 import javax.swing.*;
@@ -43,8 +42,6 @@ public class PONGpanel extends JPanel implements  ActionListener, KeyListener {
     public int getScore(int playerNo){
         if (playerNo == 1);
             return score1;
-        else 
-            return score2;
     }
 
     private void update() {
@@ -59,12 +56,8 @@ public class PONGpanel extends JPanel implements  ActionListener, KeyListener {
     }
 
     public void keyPressed(KeyEvent e) {
-
-    }
-
-    {
-            player1.pressed(e.getKetCode());
-            player2.pressed(e.getKetCode());
+            player1.pressed(e.getKeyCode());
+            player2.pressed(e.getKeyCode());
         }
      public void keyReleased(KeyEvent e){
             player1.released(e.getKeyCode());
@@ -76,7 +69,7 @@ public class PONGpanel extends JPanel implements  ActionListener, KeyListener {
         @Override
         public void paintComponent(Graphics g) {
             super.paintComponent(g);
-            g.drawString(String.format("%d:", game.getPanel().getScore(1) + " : " + game.getPanel().getScore(2)), game.getWidth() / 2, 10);
+            g.drawString(game.getPanel().getScore(1) + " : " + game.getPanel().getScore(2), game.getWidth() / 2, 10);
             ball.paint(g);
             player1.paint(g);
             player2.paint(g);
