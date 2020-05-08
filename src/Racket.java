@@ -1,7 +1,7 @@
 import java.awt.*;
 
 public class Racket {
-    private static final int WIDTH = 10, HEIGHT = 60;
+    private static final int WIDTH = 15, HEIGHT = 65;
     private PONG game;
     private int up, down;
     private int x;

@@ -55,11 +55,12 @@ public class PONGpanel extends JPanel implements  ActionListener, KeyListener {
         repaint();
     }
 
+    @Override
     public void keyPressed(KeyEvent e) {
             player1.pressed(e.getKeyCode());
             player2.pressed(e.getKeyCode());
         }
-     public void keyReleased(KeyEvent e){
+   @Override public void keyReleased(KeyEvent e){
             player1.released(e.getKeyCode());
             player2.released(e.getKeyCode());
         }

@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Ball {
-    private static final int WIDTH = 30, HEIGHT = 30;
+    private static final int WIDTH = 35, HEIGHT = 35;
     private PONG game;
     private int x, y, xa = 2, ya = 2;
     public Ball(PONG game) {

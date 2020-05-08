@@ -1,22 +1,23 @@
-import java.awt.Color;
 import javax.swing.*;
+import java.awt.*;
 
 
 public class PONG extends JFrame {
-    private final static int WIDTH = 700, HEIGHT = 450;
+    private final static int WIDTH = 750, HEIGHT = 550;
     private PONGpanel panel;
 
+    //title,color, change how big the screen is, etc.
     public PONG() {
         setSize(WIDTH,HEIGHT);
         setTitle("PONG");
         setBackground(Color.WHITE);
-        setResizable(false);
+        setResizable(true);
         setVisible(true);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         panel = new PONGpanel(this);
         add(panel);
     }
-
+// links to PONGpanel
     public PONGpanel getPanel() {
         return panel;
     }
