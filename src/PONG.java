@@ -21,7 +21,6 @@ public class PONG extends JFrame {
     public PONGpanel getPanel() {
         return panel;
     }
-
     public static void main(String[] args) {
         new PONG();
     }

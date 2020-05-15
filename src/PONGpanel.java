@@ -40,8 +40,12 @@ public class PONGpanel extends JPanel implements  ActionListener, KeyListener {
     }
 
     public int getScore(int playerNo){
-        if (playerNo == 1);
+        if (playerNo == 1)
             return score1;
+        else
+            return score2;
+
+
     }
 
     private void update() {
@@ -51,8 +55,7 @@ public class PONGpanel extends JPanel implements  ActionListener, KeyListener {
     }
 
     public void actionPerformed(ActionEvent e) {
-        update();
-        repaint();
+
     }
 
     @Override
@@ -65,7 +68,6 @@ public class PONGpanel extends JPanel implements  ActionListener, KeyListener {
             player2.released(e.getKeyCode());
         }
         public void keyTyped(KeyEvent e) {
-        ;
         }
         @Override
         public void paintComponent(Graphics g) {
@@ -78,6 +80,7 @@ public class PONGpanel extends JPanel implements  ActionListener, KeyListener {
 
     @Override
     public void actionPerformed(java.awt.event.ActionEvent actionEvent) {
-
+        update();
+        repaint();
+        }
     }
-}
